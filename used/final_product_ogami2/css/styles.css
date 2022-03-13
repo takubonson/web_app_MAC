@@ -1,0 +1,258 @@
+.row {
+    display: flex;
+    position :relative;
+    /* background-color: aqua; */
+    top: 72px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.filteringbox{
+  top: 72px;
+  width: 20%;
+  height: 100%;
+}
+
+.main {
+  left: 20%;
+  top: 72px;
+  height: 90%;
+  width: 80%;
+}
+
+.tooltip {
+  display: flex;
+  padding: 10px;
+  line-height: 1;
+  font-weight: normal;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  font-size: 13px;
+}
+
+.tooltip > .info{
+  padding-left: 10px;
+  display: block;
+}
+
+.tooltip > .logo {
+  background-color: rgb(255, 255, 255);
+  text-align: left;
+}
+
+.yearLabel {
+  font-size: 50px;
+  height : 20px;
+  width : 20px;
+  color : black;
+}
+
+.rangeslider {
+  position: absolute;
+  bottom : 15%;
+  left : 30%;
+  width : 50%;
+}
+
+#left_side {
+  position: absolute;
+  bottom: 10%;
+  left : 27%;
+  font-size :20px;
+}
+
+#right_side {
+  position: absolute;
+  left: 79%;
+  bottom: 10%;
+  font-size :20px;
+}
+
+input[type="range"] {
+  -webkit-appearance: none; /* 🚩これ無しだとスタイルがほぼ全く反映されないので注意 */
+  appearance: none;
+  cursor: pointer; /* カーソルを分かりやすく */
+  outline: none; /* スライダーのアウトラインは見た目がキツイので消す */
+  height: 14px; /* バーの高さ */
+  width: 100%; /* バーの幅 */
+  background: #8acdff; /* バーの背景色 */
+  border-radius: 10px; /* バーの両端の丸み */
+  border: solid 3px #dff1ff; /* バー周囲の線 */
+}
+/* WebKit向けのつまみ */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /*  🚩デフォルトのつまみのスタイルを解除 */
+  background: #53aeff; /* 背景色 */
+  width: 24px; /* 幅 */
+  height: 24px; /* 高さ */
+  border-radius: 50%; /* 円形に */
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); /* 影 */
+}
+/* Moz向けのつまみ */
+input[type="range"]::-moz-range-thumb {
+  background: #53aeff; /* 背景色 */
+  width: 24px; /* 幅 */
+  height: 24px; /* 高さ */
+  border-radius: 50%; /* 円形に */
+  box-shadow: 0px 3px 6px 0px rgba(0, 0, 0, 0.15); /* 影 */
+  border: none; /* デフォルトの線を消す */
+}
+/* Firefoxで点線が周りに表示されてしまう問題の解消 */
+input[type="range"]::-moz-focus-outer {
+  border: 0;
+}
+/* つまみをドラッグしているときのスタイル */
+input[type="range"]:active::-webkit-slider-thumb {
+  box-shadow: 0px 5px 10px -2px rgba(0, 0, 0, 0.3);
+}
+
+.axis_selector > * {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	-webkit-box-sizing: border-box;
+	        box-sizing: border-box;
+	border-color: inherit;
+}
+
+.axis_selector{
+	width:100%;
+	height:auto;
+	background-color: aqua;
+}
+
+.cpx_ipselect {
+	display: block;
+	width: 90%;
+	height: 100%;
+	margin: 2em auto;
+}
+.cpx_ipselect ul {
+	list-style: none;
+	padding: 0;
+}
+.cpx_ipselect input {
+	color: inherit;
+	font: inherit;
+	margin: 0;
+	background: transparent;
+	outline: none;
+	border: none;
+	border-radius: 0;
+	-webkit-appearance: none;
+	        appearance: none;
+	display:none;
+}
+.cpx_sl08 {
+	width: 100%;
+	height: 100%;
+	cursor: pointer;
+	background-color: white;
+	-webkit-box-shadow: 0 2px 0 white;
+	        box-shadow: 0 2px 0 white;
+	border-radius: 2px;
+}
+.cpx_sl08_expand {
+	width: 0;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	right: 0;
+}
+.cpx_sl08_expand::after {
+	position: absolute;
+	top: 1.2em;
+	right: 0.5em;
+	width: 0;
+	height: 0;
+	padding: 0;
+	content: '';
+	pointer-events: none;
+	border-top: 6px solid rgba(0, 0, 0, 0.3);
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+	-webkit-transform: translate(-50%, -50%) rotate(0deg) scaleY(1.75);
+	        transform: translate(-50%, -50%) rotate(0deg) scaleY(1.75);
+	-webkit-transition: all 250ms cubic-bezier(0.4,0.25,0.3,1);
+	        transition: all 250ms cubic-bezier(0.4,0.25,0.3,1);
+	z-index: 2;
+	opacity: 0.6;
+}
+.cpx_sl08_expand:hover::after {
+	opacity: 1;
+}
+.cpx_sl08_expand:checked::after {
+	-webkit-transform: translate(-50%, -50%) rotate(180deg) scaleX(-1) scaleY(1.75);
+	        transform: translate(-50%, -50%) rotate(180deg) scaleX(-1) scaleY(1.75);
+}
+.cpx_sl08_expandLabel {
+	display: block;
+	width: 100%;
+	height: 40px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	cursor: pointer;
+}
+.cpx_sl08_close {
+	display: none;
+}
+.cpx_sl08_closeLabel {
+	width: 100vw;
+	height: 100vh;
+	position: fixed;
+	top: 0;
+	left: 0;
+	display: none;
+}
+.cpx_sl08_items {
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	border: 2px solid #da3c41;
+	border-radius: 2px;
+	padding-top: 40px;
+}
+.cpx_sl08_input {
+	display: none;
+}
+.cpx_sl08_label {
+	-webkit-transition: all 250ms cubic-bezier(0.4,0.25,0.3,1);
+	        transition: all 250ms cubic-bezier(0.4,0.25,0.3,1);
+	display: block;
+	height: 0;
+	line-height: 40px;
+	overflow: hidden;
+	color: #3e3e3e;
+	background-color: #ffffff;
+	cursor: pointer;
+	padding-left: 20px;
+}
+.cpx_sl08_placeholder {
+	height: 40px;
+	vertical-align: middle;
+	position: absolute;
+	top: 0;
+	left: 0;
+	opacity: 0.6;
+	background-color: transparent;
+}
+.cpx_sl08_expand:checked + .cpx_sl08_closeLabel {
+	display: block;
+}
+.cpx_sl08_expand:checked + .cpx_sl08_closeLabel + .cpx_sl08_options .cpx_sl08_label {
+	height: 40px;
+}
+.cpx_sl08_expand:checked + .cpx_sl08_closeLabel + .cpx_sl08_options .cpx_sl08_label:hover {
+	background-color: #f7f7f7;
+}
+.cpx_sl08_expand:checked + .cpx_sl08_closeLabel + .cpx_sl08_options + .cpx_sl08_expandLabel {
+	display: none;
+}
+.cpx_sl08_input:checked + .cpx_sl08_label {
+	height: 40px;
+	margin-top: -40px;
+}

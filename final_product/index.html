@@ -1,0 +1,158 @@
+<!-- https://codepen.io/bcarvalho/pen/gWPvJB -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multifaceted Analysis of Companies</title>
+    <!-- ここから -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.18.0/TweenMax.min.js"></script>
+    <link rel="stylesheet" href="./css/start_page.css" />
+    <script src="./js/start_page.js"></script>
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/nav_bar.css"
+      media="screen,projection"
+    />
+    <!-- ここまで -->
+    <link rel="stylesheet" href="./css/upper_left_logo.css" />
+  </head>
+  <body>
+    <a href="#" id="upper_left_logo" style="text-decoration: none"
+      >Multifaceted Analysis of Companies</a
+    >
+    <nav id="menu">
+      <div class="menu-item highlight">
+        <div class="menu-text">
+          <a href="./time_mode.html">Time Mode</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-text">
+          <a href="./chart_mode.html">Chart Mode</a>
+        </div>
+      </div>
+    </nav>
+    <main class="main-content">
+      <section class="slideshow">
+        <div class="slideshow-inner">
+          <div class="slides">
+            <div class="slide is-active">
+              <div class="slide-content">
+                <div class="caption">
+                  <div class="title">Introducing M.A.C.</div>
+                  <div class="text">
+                    <p>Multifaceted Analysis of Companies</p>
+                  </div>
+                </div>
+              </div>
+              <div class="image-container">
+                <img src="./background_pic/overall.jpeg" alt="" class="image" />
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-content">
+                <div class="caption">
+                  <div class="title">Time Mode</div>
+                  <div class="text">
+                    <p>Time Modeでは企業の時価総額の推移を視覚的に楽しむことができます。</p>
+                  </div>
+                  <a href="./time_mode.html" class="btn">
+                    <span class="btn-inner">Enter</span>
+                  </a>
+                </div>
+              </div>
+              <div class="image-container">
+                <img
+                  src="./background_pic/time_mode.png"
+                  alt=""
+                  class="image"
+                />
+              </div>
+            </div>
+            <div class="slide">
+              <div class="slide-content">
+                <div class="caption">
+                  <div class="title">Chart Mode</div>
+                  <div class="text">
+                    <p>Chart Modeでは、企業の様々な情報をバブルチャートとしてプロットすることができます。</p>
+                  </div>
+                  <a href="./chart_mode.html" class="btn">
+                    <span class="btn-inner">Enter</span>
+                  </a>
+                </div>
+              </div>
+              <div class="image-container">
+                <img
+                  src="./background_pic/chart_mode.jpeg"
+                  alt=""
+                  class="image"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="pagination">
+            <div class="item is-active">
+              <span class="icon">1</span>
+            </div>
+            <div class="item">
+              <span class="icon">2</span>
+            </div>
+            <div class="item">
+              <span class="icon">3</span>
+            </div>
+          </div>
+          <div class="arrows">
+            <div class="arrow prev">
+              <span class="svg svg-arrow-left">
+                <svg
+                  version="1.1"
+                  id="svg4-Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="14px"
+                  height="26px"
+                  viewBox="0 0 14 26"
+                  enable-background="new 0 0 14 26"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M13,26c-0.256,0-0.512-0.098-0.707-0.293l-12-12c-0.391-0.391-0.391-1.023,0-1.414l12-12c0.391-0.391,1.023-0.391,1.414,0s0.391,1.023,0,1.414L2.414,13l11.293,11.293c0.391,0.391,0.391,1.023,0,1.414C13.512,25.902,13.256,26,13,26z"
+                  />
+                </svg>
+                <span class="alt sr-only"></span>
+              </span>
+            </div>
+            <div class="arrow next">
+              <span class="svg svg-arrow-right">
+                <svg
+                  version="1.1"
+                  id="svg5-Layer_1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  xmlns:xlink="http://www.w3.org/1999/xlink"
+                  x="0px"
+                  y="0px"
+                  width="14px"
+                  height="26px"
+                  viewBox="0 0 14 26"
+                  enable-background="new 0 0 14 26"
+                  xml:space="preserve"
+                >
+                  <path
+                    d="M1,0c0.256,0,0.512,0.098,0.707,0.293l12,12c0.391,0.391,0.391,1.023,0,1.414l-12,12c-0.391,0.391-1.023,0.391-1.414,0s-0.391-1.023,0-1.414L11.586,13L0.293,1.707c-0.391-0.391-0.391-1.023,0-1.414C0.488,0.098,0.744,0,1,0z"
+                  />
+                </svg>
+                <span class="alt sr-only"></span>
+              </span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>

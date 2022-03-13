@@ -1,0 +1,37 @@
+.row {
+    display: flex;
+    position: absolute;
+    /* background-color: aqua; */
+    top: 72px;
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.filteringbox{
+  top: 72px;
+  width: 20%;
+  height: 100%;
+}
+
+.main {
+  left: 20%;
+  top: 72px;
+  height: 90%;
+  width: 80%;
+}
+
+.tooltip {
+  padding: 10px;
+  line-height: 1;
+  font-weight: normal;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+  font-size: 13px;
+}
+
+.logo {
+  background-color: #fff;
+  text-align: center;
+}

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--Import Google Icon Font-->
+    <link
+      href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet"
+    />
+    <!-- Import materialize.css-->
+    <!-- <link type="text/css" rel="stylesheet" href="css/materialize.css"  media="screen,projection"/> -->
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/drop_down.css"
+      media="screen,projection"
+    />
+    <link
+      type="text/css"
+      rel="stylesheet"
+      href="css/nav_bar_time.css"
+      media="screen,projection"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Time Mode</title>
+
+    <!-- problematic -->
+    <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    />
+    <!-- problematic -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+      integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX"
+      crossorigin="anonymous"
+    />
+
+    <link rel="stylesheet" href="./css/styles.css" />
+    <!-- <link rel="stylesheet" href="./css/select.css" /> -->
+
+    <!-- for nav bar -->
+    <script
+      src="https://kit.fontawesome.com/628c8d2499.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- ここから -->
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+
+    <!-- problematic↓ -->
+    <link rel="stylesheet" href="./css/info_window.css" />
+    <link rel="stylesheet" href="./css/drop_down.css" />
+    <link rel="stylesheet" href="./css/nav_bar.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"
+    />
+    <!-- safe↑ -->
+    <!-- safe↓ -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+    />
+    <!-- ここまで -->
+
+    <!-- ここから -->
+    <script
+      src="https://kit.fontawesome.com/628c8d2499.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ここまで -->
+    <link rel="stylesheet" href="./css/upper_left_logo.css" />
+  </head>
+
+  <body>
+    <a href="./index.html" id="upper_left_logo" style="text-decoration: none"
+      >Multifaceted Analysis of Companies</a
+    >
+    <!-- ここから -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- ここまで -->
+    <nav id="menu">
+      <div class="menu-item highlight">
+        <div class="menu-text">
+          <a href="#">Time Mode</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-text">
+          <a href="./chart_mode.html">Chart Mode</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="row">
+      <div class="filteringbox">
+        <div class="sec-center">
+          <input
+            class="dropdown"
+            type="checkbox"
+            id="dropdown"
+            name="dropdown"
+          />
+          <label class="for-dropdown" for="dropdown">
+            業種フィルタ <i class="uil uil-arrow-down"></i
+          ></label>
+          <div class="section-dropdown">
+            <div class="dropdownLink">
+              <input
+                type="checkbox"
+                class="maincategory"
+                id="機械系"
+                href="#"
+                checked
+              />機械系(54)
+              <i class="uil uil-arrow-right"></i>
+            </div>
+            <div class="dropdownLink">
+              <input
+                type="checkbox"
+                class="maincategory"
+                id="サービス業"
+                href="#"
+                checked
+              />サービス業(8)
+              <i class="uil uil-arrow-right"></i>
+            </div>
+            <div class="dropdownLink">
+              <input
+                type="checkbox"
+                class="maincategory"
+                id="IT"
+                href="#"
+                checked
+              />IT(21)
+              <i class="uil uil-arrow-right"></i>
+            </div>
+            <div class="dropdownLink">
+              <input
+                type="checkbox"
+                class="maincategory"
+                id="金融・保険"
+                href="#"
+                checked
+              />金融・保険(24)
+              <i class="uil uil-arrow-right"></i>
+            </div>
+            <div class="dropdownLink">
+              <input
+                type="checkbox"
+                class="maincategory"
+                id="化学・石油・石炭"
+                href="#"
+                checked
+              />化学・石油・石炭(18)
+              <i class="uil uil-arrow-right"></i>
+            </div>
+            <div class="dropdownLink">
+              <input
+                type="checkbox"
+                class="maincategory"
+                id="卸売・小売・食料"
+                href="#"
+                checked
+              />卸売・小売・食料(29)
+              <i class="uil uil-arrow-right"></i>
+            </div>
+            <div class="dropdownLink">
+              <input
+                type="checkbox"
+                class="maincategory"
+                id="医薬品"
+                href="#"
+                checked
+              />医薬品(14)
+              <i class="uil uil-arrow-right"></i>
+            </div>
+            <div class="dropdownLink">
+              <input
+                type="checkbox"
+                class="maincategory"
+                id="運輸"
+                href="#"
+                checked
+              />運輸(16)
+              <i class="uil uil-arrow-right"></i>
+            </div>
+            <div class="dropdownLink">
+              <input
+                type="checkbox"
+                class="maincategory"
+                id="建設・不動産"
+                href="#"
+                checked
+              />建設・不動産(11)
+              <i class="uil uil-arrow-right"></i>
+            </div>
+            <div class="dropdownLink">
+              <input
+                type="checkbox"
+                class="maincategory"
+                id="その他"
+                href="#"
+                checked
+              />その他(24)
+              <i class="uil uil-arrow-right"></i>
+            </div>
+
+            <input
+              class="dropdown-sub"
+              type="checkbox"
+              id="dropdown-sub"
+              name="dropdown-sub"
+            />
+            <label class="for-dropdown-sub" for="dropdown-sub"
+              >機械系 <i class="uil uil-plus"></i
+            ></label>
+            <div class="section-dropdown-sub">
+              <a class="dropdownLink" href="#"
+                >Dropdown sub link <i class="uil uil-arrow-right"></i
+              ></a>
+              <a class="dropdownLink" href="#"
+                >Dropdown sub link <i class="uil uil-arrow-right"></i
+              ></a>
+            </div>
+
+            <a class="dropdownLink" href="#"
+              >サービス業 <i class="uil uil-arrow-right"></i
+            ></a>
+          </div>
+        </div>
+      </div>
+
+      <!-- <<<<<<< HEAD -->
+      <!-- ここから -->
+      <!-- <div class="modal fade show" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="material-icons">clear</i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>content</p>
+            </div> -->
+      <!-- ======= -->
+      <!-- ここから -->
+      <div class="modal fade show" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title"></h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="material-icons">clear</i>
+              </button>
+            </div>
+            <div class="modal-body"></div>
+            <div class="modal-footer"></div>
+          </div>
+        </div>
+      </div>
+      <!-- ここまで -->
+
+      <div class="main" id="parentdiv">
+        <div class = "rangeslider">
+          <input id = time_slider type="range" name="example" min="0" max="251" step="1" value="0">
+          </div>
+          <span id = "left_side">2001-1</span>
+          <span id = "right_side">2021-12</span>
+        <svg id="time-mode"></svg>
+      </div>
+    </div>
+
+    <script src="./js/d3.js"></script>
+    <script src="./js/d3-tip.js"></script>
+    <script src="./js/time_mode.js"></script>
+
+    <!-- ここから -->
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+      integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+      integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+      crossorigin="anonymous"
+    ></script>
+    <!-- ここまで -->
+  </body>
+</html>

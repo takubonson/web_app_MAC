@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <link rel="stylesheet" href="./css/drop_down.css" />
+    <link rel="stylesheet" href="./css/nav_bar.css" />
+    <link rel="stylesheet" href="./css/info_window.css" />
+    <!-- <link
+      href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      rel="stylesheet"
+      id="bootstrap-css"
+    /> -->
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Material+Icons"
+    />
+    <!-- <link
+      rel="stylesheet"
+      href="https://unpkg.com/bootstrap-material-design@4.1.1/dist/css/bootstrap-material-design.min.css"
+      integrity="sha384-wXznGJNEXNG1NFsbm0ugrLFMQPWswR3lds2VeinahP8N0zJw9VWSopbjv2x7WCvX"
+      crossorigin="anonymous"
+    /> -->
+    <link
+      href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons"
+    />
+  </head>
+  <script
+    src="https://kit.fontawesome.com/628c8d2499.js"
+    crossorigin="anonymous"
+  ></script>
+
+  <body>
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <nav id="menu">
+      <div class="menu-item highlight">
+        <div class="menu-text">
+          <a href="./time_mode.html">Time Mode</a>
+        </div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-text">
+          <a href="#">Chart Mode</a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="sec-center">
+      <input class="dropdown" type="checkbox" id="dropdown" name="dropdown" />
+      <label class="for-dropdown" for="dropdown">
+        業種フィルタ <i class="uil uil-arrow-down"></i
+      ></label>
+      <div class="section-dropdown">
+        <div class="dropdownLink">
+          <input type="checkbox" href="#" />機械系
+          <i class="uil uil-arrow-right"></i>
+        </div>
+        <div class="dropdownLink">
+          <input type="checkbox" href="#" />サービス業
+          <i class="uil uil-arrow-right"></i>
+        </div>
+        <div class="dropdownLink">
+          <input type="checkbox" href="#" />IT
+          <i class="uil uil-arrow-right"></i>
+        </div>
+        <div class="dropdownLink">
+          <input type="checkbox" href="#" />金融・保険
+          <i class="uil uil-arrow-right"></i>
+        </div>
+        <div class="dropdownLink">
+          <input type="checkbox" href="#" />化学・石油・石炭
+          <i class="uil uil-arrow-right"></i>
+        </div>
+        <div class="dropdownLink">
+          <input type="checkbox" href="#" />卸売・小売・食料
+          <i class="uil uil-arrow-right"></i>
+        </div>
+        <div class="dropdownLink">
+          <input type="checkbox" href="#" />医薬品
+          <i class="uil uil-arrow-right"></i>
+        </div>
+        <div class="dropdownLink">
+          <input type="checkbox" href="#" />運輸
+          <i class="uil uil-arrow-right"></i>
+        </div>
+        <div class="dropdownLink">
+          <input type="checkbox" href="#" />建設・不動産
+          <i class="uil uil-arrow-right"></i>
+        </div>
+        <div class="dropdownLink">
+          <input type="checkbox" href="#" />その他
+          <i class="uil uil-arrow-right"></i>
+        </div>
+
+        <!-- 
+        <input
+          class="dropdown-sub"
+          type="checkbox"
+          id="dropdown-sub"
+          name="dropdown-sub"
+        />
+        <label class="for-dropdown-sub" for="dropdown-sub"
+          >機械系 <i class="uil uil-plus"></i
+        ></label>
+        <div class="section-dropdown-sub">
+          <a class="dropdownLink" href="#"
+            >Dropdown sub link <i class="uil uil-arrow-right"></i
+          ></a>
+          <a class="dropdownLink" href="#"
+            >Dropdown sub link <i class="uil uil-arrow-right"></i
+          ></a>
+        </div>
+
+        <a class="dropdownLink" href="#"
+          >サービス業 <i class="uil uil-arrow-right"></i
+        ></a> -->
+      </div>
+    </div>
+
+    <!-- detail button -->
+    <!-- <div class="container">
+      <div class="row mt-4">
+        <div class="col-lg-2 col-md-6">
+          <button
+            class="btn btn-block btn-primary"
+            data-toggle="modal"
+            data-target="#myModal"
+          >
+            Classic
+            <div class="ripple-container"></div>
+          </button>
+        </div>
+      </div> -->
+
+      <div class="modal fade show" id="myModal" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Modal title</h5>
+              <button
+                type="button"
+                class="close"
+                data-dismiss="modal"
+                aria-label="Close"
+              >
+                <i class="material-icons">clear</i>
+              </button>
+            </div>
+            <div class="modal-body">
+              <p>従業員数：Far far away,</p>
+            </div>
+            <div class="modal-footer">
+              <button
+                type="button"
+                class="btn btn-danger btn-link"
+                data-dismiss="modal"
+              >
+                Close
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/popper.js@1.12.6/dist/umd/popper.js"
+      integrity="sha384-fA23ZRQ3G/J53mElWqVJEGJzU0sTs+SvzG8fXVWP+kJQ1lwFAOkcUOysnlKJC33U"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://unpkg.com/bootstrap-material-design@4.1.1/dist/js/bootstrap-material-design.js"
+      integrity="sha384-CauSuKpEqAFajSpkdjv3z9t8E7RlpJ1UP0lKM/+NdtSarroVKu069AlsRPKkFBz9"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
